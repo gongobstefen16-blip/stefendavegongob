@@ -1,0 +1,296 @@
+/* ============================= */
+/* CSS Zen Garden - Switch On + All Animations + Neon Glow */
+/* ============================= */
+
+/* ============================= */
+/* BODY */
+body {
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	height: 100%;
+	font-family: verdana, arial;
+	background: #000000 url(/3.gif);
+	font-size: 8pt;
+	color: #FFFFFF;
+
+	/* fade in page */
+	animation: fadeInPage 1.5s ease-in;
+}
+
+@keyframes fadeInPage {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+/* ============================= */
+/* LINKS WITH NEON GLOW */
+a {
+	color: #09ff00;
+	text-decoration: none;
+	transition: all 0.3s ease;
+	text-shadow: 0 0 5px #09ff00, 0 0 10px #09ff00, 0 0 20px #09ff00;
+}
+
+a:hover {
+	color: #FF6600;
+	transform: scale(1.1);
+	text-shadow: 0 0 10px #FF6600, 0 0 20px #FF6600, 0 0 30px #FF6600;
+}
+
+/* ============================= */
+/* HEADINGS H3 WITH NEON GLOW */
+h3 {
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.preamble h3,
+.explanation h3,
+.participation h3,
+.benefits h3,
+.requirements h3 {
+	text-shadow: 0 0 5px #09ff00, 0 0 10px #09ff00, 0 0 15px #09ff00;
+	transition: all 0.3s ease;
+}
+
+.preamble h3:hover,
+.explanation h3:hover,
+.participation h3:hover,
+.benefits h3:hover,
+.requirements h3:hover {
+	text-shadow: 0 0 15px #FF6600, 0 0 25px #FF6600, 0 0 35px #FF6600;
+	transform: scale(1.05);
+}
+
+/* ============================= */
+/* WRAPPER WITH FLOATING */
+.page-wrapper {
+	position: relative;
+	margin: 10px auto;
+	padding: 10px;
+	width: 594px;
+	text-align: left;
+	voice-family: "\"}\"";
+	voice-family: inherit;
+	border: 10px solid #ffffff;
+	background: #000000 url(/zentop.gif) no-repeat top left;
+
+	/* floating animation */
+	animation: floatUpDown 4s ease-in-out infinite;
+}
+
+/* ============================= */
+/* FLOATING ANIMATION */
+@keyframes floatUpDown {
+	0% { transform: translateY(0px); }
+	50% { transform: translateY(-10px); }
+	100% { transform: translateY(0px); }
+}
+
+/* ============================= */
+/* HEADER */
+header {
+	margin-top: 390px;
+	position: relative;
+}
+
+header h1, header h2 {
+	display: none;
+}
+
+/* ============================= */
+/* SUMMARY */
+.summary p:first-child {
+	position: absolute;
+	width: 586px;
+	padding: 14px;
+	font-size: 8pt;
+	text-transform: uppercase;
+	background: #000000 url(/bg2.gif);
+	color: #09ff00;
+	text-align: center;
+	top: 327px;
+	left: -1px;
+	border: 1px solid #ffffff;
+}
+
+.summary p:last-child {
+	position: absolute;
+	font-size: 7.5pt;
+	text-transform: uppercase;
+	font-family: Arial;
+	color: #CCCCCC;
+	top: 307px;
+	left: 345px;
+	width: 270px;
+}
+
+.summary a {
+	color: #09ff00;
+}
+
+.summary a:hover {
+	background: #99FF00;
+	color: #000000;
+}
+
+/* ============================= */
+/* FOOTER */
+footer {
+	position: absolute;
+	font-size: 7.5pt;
+	text-transform: uppercase;
+	font-family: Arial;
+	color: #FFFFFF;
+	top: 307px;
+}
+
+footer a {
+	color: #09ff00;
+}
+
+footer a:hover {
+	background: #ffffff;
+	color: #000000;
+}
+
+/* ============================= */
+/* CONTENT SECTIONS */
+.preamble,
+.explanation,
+.participation,
+.benefits,
+.requirements {
+	width: 440px;
+	text-align: justify;
+
+	/* slide up + float */
+	animation: slideUp 1.2s ease, floatUpDown 5s ease-in-out infinite;
+}
+
+@keyframes slideUp {
+	from {
+		transform: translateY(40px);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.preamble h3 {
+	position: relative;
+	background: transparent url(/theroad.gif) no-repeat;
+	margin-top: 10px;
+	height: 45px;
+	left: -10px;
+}
+
+.explanation h3 {
+	position: relative;
+	background: transparent url(/sowhat.gif) no-repeat;
+	margin-top: 25px;
+	height: 45px;
+	left: -10px;
+}
+
+.participation h3 {
+	position: relative;
+	background: transparent url(/parti.gif) no-repeat;
+	margin-top: 25px;
+	height: 45px;
+	left: -10px;
+}
+
+.benefits h3 {
+	position: relative;
+	background: transparent url(/beni.gif) no-repeat;
+	margin-top: 25px;
+	height: 45px;
+	left: -10px;
+}
+
+.requirements h3 {
+	position: relative;
+	background: transparent url(/reqs.gif) no-repeat;
+	margin-top: 25px;
+	height: 45px;
+	left: -10px;
+}
+
+/* ============================= */
+/* SIDEBAR */
+.design-selection,
+.design-archives,
+.zen-resources {
+	/* slide right + float */
+	animation: slideRight 1.3s ease, floatUpDown 6s ease-in-out infinite;
+}
+
+@keyframes slideRight {
+	from {
+		transform: translateX(80px);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+.design-selection {
+	width: 160px;
+	position: absolute;
+	top: 395px;
+	left: 457px;
+	background: transparent url(/top-menu.gif) no-repeat;
+	height: 400px;
+}
+
+.design-selection ul {
+	list-style: none;
+	padding-left: 19px;
+	margin-left: 0;
+	margin-top: 10px;
+}
+
+.design-selection ul li {
+	padding: 0px 0px 0px 16px;
+	background: url(/arrow.gif) no-repeat 6px 2px;
+	margin-bottom: 5px;
+	transition: transform 0.3s ease;
+}
+
+.design-selection ul li:hover {
+	transform: translateX(6px);
+}
+
+.design-archives {
+	width: 160px;
+	position: absolute;
+	top: 725px;
+	left: 457px;
+	background: transparent url(/mid-menu.gif) no-repeat;
+	height: 200px;
+	text-transform: capitalize;
+}
+
+.zen-resources {
+	width: 160px;
+	position: absolute;
+	top: 847px;
+	left: 457px;
+	background: transparent url(/bot-menu.gif) no-repeat;
+	height: 200px;
+}
+
+.design-archives ul,
+.zen-resources ul {
+	list-style: none;
+	padding-left: 34px;
+	margin-left: 0;
+	margin-top: 10px;
+}
